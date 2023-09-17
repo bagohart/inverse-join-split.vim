@@ -2,11 +2,16 @@
 This Vim plugin provides actions for inverse joining or splitting lines.
 
 # What does it do?
-`(|)` is the cursor. 
+Inverse join appends previous line at the end of current line, inserting
+whitespace.  
+Inverse Split moves remainder of current line to previous line.  
+
+Example: `(|)` is the cursor. 
 - Inverse join: Turn `foo\n(|)bar`  into `bar (|)foo`
 - Inverse split: Turn `foo (|)bar` into `(|)bar\nfoo`
+
 Both mappings accept counts and are repeatable with `.` without dependency on
-[vim-repeat](https://github.com/tpope/vim-repeat)
+[vim-repeat](https://github.com/tpope/vim-repeat).
 
 # Mappings
 No mappings are created automatically. Add your own. I use:
